@@ -89,28 +89,44 @@ public class LinkedList<E> implements List<E> {
 
     public static void main(String args[]) {
         LinkedList<Integer> myList = new LinkedList<>();
+        ListIterator<Integer> itr = myList.listIterator();
 
         for (int i = 0; i < 3; i++)
             myList.append(i);
         
-
-        System.out.println(myList.length());
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
         
-        myList.insert(1, 3);
-        myList.insert(1, 5);
+    }
 
-        System.out.println(myList.length());
+    public ListIterator<E> listIterator() {
+        return new LinkedListIterator();
+    }
 
-        myList.update(2, 10);
+    class LinkedListIterator implements ListIterator<E> {
+        Link<E> curr = head;
+        
+        public boolean hasNext() {
+            return curr != tail; // curr가 head가 아니면 next가 존재
+        }
 
-        System.out.println(myList);
+        public E next() {
+            curr = curr.next();
+            return curr.item();
+        }
 
-        myList.remove(1);
+        public boolean hasPrevious() {
+            return curr != head;
+        }
 
-        System.out.println(myList);
-
-        myList.clear();
-
-        System.out.println(myList);
+        public E previous() {
+            Link<E> tmp = head;
+            while (tmp.next() != curr) {
+                tmp = tmp.next();
+            }
+            curr = tmp;
+            return curr.next().item();
+        }
     }
 }

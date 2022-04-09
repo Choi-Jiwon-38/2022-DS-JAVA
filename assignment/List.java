@@ -6,4 +6,5 @@ public interface List<E> {
     public E getValue(int pos); // 주어진 위치의 아이템을 읽음
     public E remove(int pos); // 주어진 위치의 아이템을 삭제
     public int length(); // 리스트 내 아이템의 개수를 출력
+    public ListIterator<E> listIterator();
 }

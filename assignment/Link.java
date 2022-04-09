@@ -2,8 +2,6 @@ class Link<E> {
     private E item;
     private Link<E> next;
 
-    
-
     public Link(E item, Link<E> next) {
         this.item = item;
         this.next = next;
