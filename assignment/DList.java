@@ -37,7 +37,7 @@ public class DList<E> implements List<E> {
         for (int i = 0; i < pos; i++) {
             curr = curr.next();
         }
-        return curr.item();
+        return curr.next().item();
 
     }
     public E remove(int pos) {
@@ -74,11 +74,7 @@ public class DList<E> implements List<E> {
             }
 
             public E previous() {
-                DLink<E> tmp = head;
-                while (tmp.next() != curr) {
-                    tmp = tmp.next();
-                }
-                curr = tmp;
+                curr = curr.prev();
                 return curr.next().item();
             }
         };
