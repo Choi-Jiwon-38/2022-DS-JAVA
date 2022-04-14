@@ -1,6 +1,6 @@
 public class LinkedQueue<E> implements Queue<E> {
     private Link<E> front, rear;
-    int size;
+    private int size;
     
     public LinkedQueue() {
         front = rear = Link.get(null, null);
