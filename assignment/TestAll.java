@@ -72,8 +72,6 @@ public class TestAll {
         System.out.println(myQueue.length());
         myQueue.clear();
         System.out.println(myQueue.length());
-
-        // 씨발 좆같네 씨빨씨빨씨빨씨ㅏ빨씨ㅏ빨씨빠씨빨
     }
 }
 
