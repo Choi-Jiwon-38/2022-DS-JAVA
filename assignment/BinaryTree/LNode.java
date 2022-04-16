@@ -29,8 +29,7 @@ public class LNode<E> implements BinNode<E> {
 
     @Override
     public boolean isLeaf() {
-        // TODO Auto-generated method stub
-        return false;
+        return true;
     }
     
 }
