@@ -3,8 +3,8 @@ package BinaryTree;
 public class LNode<E> implements BinNode<E> {
     private E data;
 
-    public LNode(E data) {
-        this.data = data;
+    public LNode(E element) {
+        this.data = element;
     }
 
     @Override
@@ -31,5 +31,14 @@ public class LNode<E> implements BinNode<E> {
     public boolean isLeaf() {
         return true;
     }
-    
+
+    @Override
+    public void setLeft(BinNode<E> n) { }
+
+    @Override
+    public void setRight(BinNode<E> n) { }
+
+    public String toString() {
+        return "LNode: " + this.element();
+    }
 }

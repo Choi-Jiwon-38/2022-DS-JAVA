@@ -1,7 +1,7 @@
 package BinaryTree;
 
 public class INode<E> implements BinNode<E> {
-
+    
     private E data;
     private BinNode<E> left, right;
 
@@ -35,5 +35,18 @@ public class INode<E> implements BinNode<E> {
     public boolean isLeaf() {        
         return left == null && right == null;
     }
+
+    @Override
+    public void setLeft(BinNode<E> n) {
+        this.left = n;
+    }
+
+    @Override
+    public void setRight(BinNode<E> n) {
+        this.right = n;
+    }
     
+    public String toString() {
+        return "INode: " + this.element();
+    }
 }

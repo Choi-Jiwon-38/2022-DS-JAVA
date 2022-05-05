@@ -14,4 +14,8 @@ public interface BinNode<E> {
 
     /** Return true if this is a leaf node */
     public boolean isLeaf();
+    
+    public void setLeft(BinNode<E> n);
+    
+    public void setRight(BinNode<E> n);
 }
