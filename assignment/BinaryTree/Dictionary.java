@@ -1,7 +1,5 @@
 package BinaryTree;
 
-import BinaryTree.BST.Entry;
-
 public interface Dictionary<Key, E> {
     /** Reinitialize dictionary */
     public void claer();
