@@ -30,6 +30,7 @@ public class BST<K extends Comparable<K>, E> implements Dictionary<K, E> {
 
     public BinNode<Entry> insert_helper(K key, E element, BinNode<Entry> rt) {
         if (rt == null) { // 도착 지점 <- insert 해주어야 하는 곳
+            size++;
             return new LNode<>(new Entry(key, element));
         }
 
